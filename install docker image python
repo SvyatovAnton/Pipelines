@@ -1,0 +1,12 @@
+pipeline {
+    agent {
+        docker { image 'python:latest' }
+    }
+    stage('4-Verification Python version') {
+            steps {
+                echo "Print Python Version"
+                sh 'python --version'
+            }
+        }
+    }
+}    
